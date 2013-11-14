@@ -119,6 +119,8 @@
                    modifyInfinispan="${infinispan.parts}/asymmetric-1.xml"/>
         <transform in="clustered.xml" out="testsuite/clustered-asymmetric-2.xml"
                    modifyInfinispan="${infinispan.parts}/asymmetric-2.xml"/>
+        <transform in="clustered.xml" out="testsuite/clustered-clusterloader.xml"
+                   modifyInfinispan="${infinispan.parts}/clusterloader.xml"/>
     </target>
 
     <macrodef name="transform">

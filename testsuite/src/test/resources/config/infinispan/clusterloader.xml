@@ -1,0 +1,10 @@
+<subsystem xmlns="urn:infinispan:server:core:6.0">
+    <cache-container name="clustered" default-cache="memcachedCache">
+        <transport stack="udp" executor="infinispan-transport" lock-timeout="240000"/>
+        <replicated-cache name="memcachedCache" start="EAGER" mode="SYNC" batching="false" remote-timeout="30000">
+            <state-transfer enabled="false" timeout="60000" />
+            <cluster-loader name="myClusterLoader" remote-timeout="60000" preload="true" />
+        </replicated-cache>
+    </cache-container>
+    <cache-container name="security"/>
+</subsystem>
